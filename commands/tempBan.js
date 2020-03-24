@@ -10,7 +10,9 @@ module.exports.run = async (bot, message, args) => {
 
     if (!user) return message.channel.send("Je maakt als volgt gebruik van het commando: !tempban (gebruiker) (tijd) (reden)")
 
-    console.log(user);
+    if (user.hasPermission("MANAGE_MESSAGE'S")) return message.channel.send("Deze gebruiker kan je niet bannen");
+
+    
 
 }
 
